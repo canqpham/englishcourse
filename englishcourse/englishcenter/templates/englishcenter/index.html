@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+{% block body %}
+#!/usr/bin/python
+
+# -*- coding: utf8 -*-
+<body>
+<div>
+    <form method="post">
+    {% csrf_token %}
+    <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <label for="validationServer01">Tên học viên</label>
+      <input name="student_name" type="text" class="form-control is-valid" id="validationServer01" placeholder="Tên" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="validationServer02">Email</label>
+      <input name='email' type="text" class="form-control is-valid" id="validationServer02" placeholder="Địa chỉ email" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="validationServerUsername">Số điện thoại</label>
+      <div class="input-group">
+        <input name="numberphone" type="text" class="form-control is-invalid" id="validationServerUsername" placeholder="Số điện thoại" aria-describedby="inputGroupPrepend3" required>
+        <div class="invalid-feedback">
+          Please choose a username.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label for="validationServer03">Địa chỉ</label>
+      <input name='address' type="text" class="form-control is-invalid" id="validationServer03" placeholder="Địa chỉ" required>
+      <div class="invalid-feedback">
+        Please provide a valid city.
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+
+      <label for="inputState">Giới tính</label>
+      <select name="sex" id="inputState" class="form-control">
+        <option selected>Giới tính</option>
+        <option>Female</option>
+        <option>Male</option>
+      </select>
+
+    </div>
+    <div class="col-md-3 mb-3">
+      <label>Ngày sinh</label>
+        <div class="form-group row">
+          <div class="col-10">
+            <input name="datebirth" class="form-control" type="datetime-local" id="example-datetime-local-input">
+          </div>
+        </div>
+      <div class="invalid-feedback">
+        Please provide .
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-primary" type="submit">Đăng ký</button>
+</form>
+</div>
+</body>
+</html>
+
+{% endblock %}
